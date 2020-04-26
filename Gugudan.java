@@ -10,16 +10,26 @@ public class Gugudan {
 		Scanner sc = new Scanner(System.in);
 		
 		int number, result;
-		int i;
+		int i, n;
 		
 		do {
-			System.out.print("2ÀÌ»ó 9ÀÌÇÏ ÀÚ¿¬¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			System.out.print("2ì´ìƒ 9ì´í•˜ ìì—°ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			number = sc.nextInt();
-		} while (number<2 || number >9);
+		} while (number<0  || number >9 || number == 1);
 		
-		for (i = 1; i<=9; i++) {
-			result = number * i;
-			System.out.println(number + "¡¿" + i + "=" + result);
+		if (number == 0) {
+			for (i = 2; i<=9; i++) {
+				for (n = 1; n<=9; n++) {
+					result = i*n;
+					System.out.println(i + "Ã—" + n + "=" + result);
+				}
+			}
+		}
+		else {
+			for (i = 1; i<=9; i++) {
+				result = number * i;
+				System.out.println(number + "Ã—" + i + "=" + result);
+			}
 		}
 	}
 
